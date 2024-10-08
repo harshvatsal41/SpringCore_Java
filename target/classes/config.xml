@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/beans/spring-context.xsd">
+
+<!--    this id our bean-->
+<!--    injecting bean by setters injection method-->
+    <bean class="org.spring.entities.Student" name="student1">
+        <property name="studentId" value="23210" />
+        <property name="studentName" value="Harsh Vatsal" />
+        <property name="studentAddress" value="146" />
+    </bean>
+
+    <bean class="org.spring.entities.Student" name="student2">
+        <property name="studentId" value="23203" />
+        <property name="studentName" value="Ayush Pathak" />
+        <property name="studentAddress" value="9" />
+    </bean>
+    <bean class="org.spring.entities.Student" name="student3" p:studentId="23025" p:studentName="preet" p:studentAddress="69">
+
+    </bean>
+
+</beans>

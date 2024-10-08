@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/beans/spring-context.xsd
+        http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+<!--    standAlone List-->
+    <util:list list-class="java.util.LinkedList" id="friends">
+        <value>Ayush</value>
+        <value>Preet</value>
+        <value>Madhav</value>
+        <value>Rohan</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="struct">
+        <entry key="JavaScript" value="2000"/>
+        <entry key="Java" value="3000"/>
+    </util:map>
+
+
+    <util:properties id="properties">
+        <prop key="url">mysql:jdbc://localhost:/3306/database</prop>
+        <prop key="username">root</prop>
+        <prop key="password">987354</prop>
+        <prop key="driver"> com.mysql.jdbc.Driver</prop>
+    </util:properties>
+
+
+    <bean class="org.spring.StandAloneCollections.Temp" name="temp">
+        <property name="friends" ref="friends"/>
+        <property name="feeStructure" ref="struct"/>
+        <property name="properties" ref="properties"/>
+    </bean>
+</beans>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/beans/spring-context.xsd">
+
+
+    <bean class="org.spring.entities.Employes" name="employee1">
+        <property name="name" value="Harsh" />
+        <property name="phones">
+            <list>
+                <value>8860313182</value>
+                <value>9319529286</value>
+                <value>8395058299</value>
+                <null/>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Delhi</value>
+                <value>UttarPradesh</value>
+                <value>Haryana</value>
+            </set>
+        </property>
+        <property name="roll_No">
+            <map>
+                <entry key="23210" value = "Harsh" />
+                <entry key="23203" value = "ayush"/>
+                <entry key="23235" value = "Preet" />
+            </map>
+        </property>
+    </bean>
+
+
+</beans>
